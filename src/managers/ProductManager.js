@@ -10,6 +10,7 @@ class ProductManager {
             const data = await readFile(this.path, 'utf8');
             return JSON.parse(data);
         } catch (error) {
+            console.error('Error reading JSON file:', error);
             return [];
         }
     }

@@ -2,7 +2,7 @@ import express from 'express';
 import CartManager from '../managers/CartManager.js';
 
 const router = express.Router();
-const cartManager = new CartManager('cart.json');
+const cartManager = new CartManager('./data/cart.json');
 
 router.post('/', async (req, res) => {
     try {
